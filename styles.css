@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Figtree;
+    src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+:root{
+    --yellow-primary: hsl(47, 88%, 63%);
+    --white-neutral: hsl(0, 0%, 100%);
+    --grey-neutral: hsl(0, 0%, 50%);
+    --black-neutral: hsl(0, 0%, 7%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Figtree", sans-serif;
+    height: 100vh;
+    background-color: var(--yellow-primary);
+    display: grid;
+    place-content: center;
+}
+.card{
+    background-color: var(--white-neutral);
+    max-width: 384px;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--black-neutral);
+    box-shadow: 0.5rem 0.5rem var(--black-neutral);
+
+    display: grid;
+    gap: 1.5rem;
+}
+.card__img{
+    border-radius: 0.625rem ;
+}
+.card__img img{
+    border-radius: inherit;
+    width: 100%;
+}
+.card__content{
+    display: grid;
+    gap: 0.75rem ;
+}
+.card__tags{
+    background-color: var(--yellow-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem ;
+    font-weight: 800;
+    font-size: 0.875rem;
+    line-height: 1.5;
+
+}
+.card__date{
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+.card__title{
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.5;
+    cursor: pointer;
+}
+.card__title:active{
+    color: var(--yellow-primary);
+}
+.card__text{
+    line-height: 1.5;
+    color: var(--grey-neutral);
+}
+.card__author{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.card__author-name{
+    font-size: 0.875rem;
+    font-weight: 800;
+}
+.card__author-photo{
+    height: 32px;
+    width: 32px;
+}
+
+@media screen and (max-width: 450px){
+    .card{
+        margin: 1.5rem;
+        max-width: 327px;
+    }
+    .card__title{
+        font-size: 1.25rem;
+    }
+    .card__text{
+        font-size: 0.875rem;
+    }
+    .card__tags, .card__date{
+        font-size: 0.75rem;
+    }
+}
